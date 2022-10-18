@@ -1,13 +1,21 @@
-def time_to_death(money_def, salary_def, spend_def, increase_def):
+# Имеется финансовая подушка безопасности money_capital руб.
+# Ежемесячная зарплата составляет salary рублей,
+# а расходы на проживание превышают ее и составляют spend руб. в месяц.
+# Рост цен ежемесячно увеличивает расходы на 5%.
+#
+# Определить, сколько можно прожить, используя только подушку и зарплату.
+#
+# Подумайте, какой цикл лучше всего подойдет для этой задачи.
+# Решение оформите в виде функции, количество позиционных аргументов
+# и аргументов по умолчанию выбираете вы сами.
+def time_to_death(money, salary, spend, increase):
     month = 0
-    spend_money = spend_def
     while True:
 
-        money_def += salary_def - spend_money
-        print(money_def)
-        spend_money *= 1 + increase_def
+        money += salary - spend
+        spend *= 1 + increase
 
-        if money_def < 0:
+        if money < 0:
             break
         month += 1
     return month
@@ -17,10 +25,9 @@ money_capital = 10000
 salary = 5000
 spend = 6000
 increase = 0.05
-money = money_capital
 month = 0
 
-# print(month)
+
 
 #  Зарплата	Месячная инфляция 	Финансовая подушка	Траты
 #   5000	    0,05	            10000	            6000
@@ -35,4 +42,4 @@ month = 0
 # Подсчет сделан в excel -- целых месяцев 5
 
 
-print(time_to_death(money, salary, spend, increase))
+print(time_to_death(money_capital, salary, spend, increase))
