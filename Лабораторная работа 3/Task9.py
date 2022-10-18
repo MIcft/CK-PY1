@@ -1,9 +1,9 @@
-def need_money(month_def, salary_def, spend_def, increase_def):
+def need_money(month, salary, spend, increase):
     money = 0
-    for i in range(month_def):
-        money += salary_def - spend_def
-        spend_def *= 1 + increase_def
-    return -money
+    for i in range(month):
+        money -= salary - spend
+        spend *= 1 + increase
+    return money
 
 salary = 5000  # зарплата
 spend = 6000  # траты
