@@ -11,7 +11,7 @@
 
 
 def get_count_char(str_):
-    separate_list = str_.lower().split(' ')
+    separate_list = str_.lower().split()
     separate_list.sort()
     list_ = ' '.join(separate_list)
     alphabet_dict = {}
@@ -27,7 +27,7 @@ def percent_char(dict_):
     count = sum(dict_.values())
     for letter, value in dict_.items():
         dict_[letter] = round(value/count, 3)
-    print(dict_)
+    return dict_
 
 main_str = """
     Данное предложение будет разбиваться на отдельные слова. 
@@ -36,5 +36,5 @@ main_str = """
 """
 dict_ =  get_count_char(main_str)
 
-print(get_count_char(main_str))
+print(dict_)
 print(percent_char(dict_))
