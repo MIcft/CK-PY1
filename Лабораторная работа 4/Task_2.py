@@ -6,7 +6,6 @@
 def delete(list_, index=None):
     if index is None:
         index = len(list_)-1  # Автор кода не знает что такое list_[-1]
-    last_index = len(list_)-1
     list_del = list_[:index]+list_[index+1:]
     return list_del
 
