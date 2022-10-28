@@ -1,4 +1,4 @@
-# Вариант для лохов
+# Простой способ удалить элемент списка
 # def delete(list_, index=-1):
 #     del list_[index]
 #     return list_
