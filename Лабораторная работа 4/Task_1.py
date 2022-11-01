@@ -24,5 +24,5 @@ main_str = """
 """
 dict_ = get_count_char(main_str)
 
-print(get_count_char(main_str))
+print(dict_)
 print(percent_char(dict_))
