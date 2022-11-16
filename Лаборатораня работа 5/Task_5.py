@@ -5,11 +5,16 @@
 # Цифры: 0 - 9
 # Для того чтобы сгенерировать случайную выборку, следует использовать функцию sample из модуля random.
 # TODO написать функцию генерации случайных паролей
+import string
 from random import sample
+
+
 def get_random_password() -> list:
-    list_symbol = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    list_symbol = string.ascii_letters+string.digits
     list_ = sample(list_symbol, 8)
 
     return list_
 
+
 print(get_random_password())
+
